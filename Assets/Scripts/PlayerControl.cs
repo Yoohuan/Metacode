@@ -31,4 +31,6 @@ public class PlayerControl : MonoBehaviour
         playerVel = playerVel * speed;
         myRigidbody.velocity = playerVel;
     }
+
+    
 }
