@@ -18,6 +18,7 @@ public class Items : MonoBehaviour
     [SerializeField] GameObject panel;
 
     bool isTouch;
+    public ScoresBoard ScoresBoard;
 
     void Start()
     {
@@ -59,8 +60,9 @@ public class Items : MonoBehaviour
     {
         if (isTouch && Input.GetKeyDown(KeyCode.F))
         {
-            Time.timeScale = 0.0f;
-            panel.SetActive(true);
+            ScoresBoard.AddScore();
+            //Time.timeScale = 0.0f;
+            //panel.SetActive(true);
         }
     }
 }
