@@ -12,9 +12,9 @@ public class ScoresBoard : MonoBehaviour
     {
         ScoreText.text = "1";
     }
-    public void AddScore()
+    public void AddScore(int Point)
     {
-        Scores += 1;
+        Scores += Point;
 
         ScoreText.text = Scores.ToString();
     }

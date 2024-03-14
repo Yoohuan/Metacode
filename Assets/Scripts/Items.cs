@@ -60,7 +60,7 @@ public class Items : MonoBehaviour
     {
         if (isTouch && Input.GetKeyDown(KeyCode.F))
         {
-            ScoresBoard.AddScore();
+            ScoresBoard.AddScore(point);
             //Time.timeScale = 0.0f;
             //panel.SetActive(true);
         }
