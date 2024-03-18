@@ -17,6 +17,10 @@ public class ButtonInPanel : MonoBehaviour
     [SerializeField] GameObject nextPanel;
 
     [Space(10)]
+    [Header("回答错误提示")]
+    [SerializeField] GameObject wrong;
+
+    [Space(10)]
     [Header("物品")]
     [SerializeField] GameObject item;
     // Start is called before the first frame update
@@ -57,4 +61,8 @@ public class ButtonInPanel : MonoBehaviour
         Destroy(fatherPanel);
     }
 
+    public void WrongButton()
+    {
+        wrong.SetActive(true);
+    }
 }
