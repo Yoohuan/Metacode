@@ -45,9 +45,12 @@ public class ButtonInPanel : MonoBehaviour
     public void Cancel()
     {
         Time.timeScale = 1.0f;
-        firstPanel.SetActive(true);
 
         gameObject.SetActive(false);
+
+        firstPanel.SetActive(true);
+
+        
 
         fatherPanel.SetActive(false);
 
