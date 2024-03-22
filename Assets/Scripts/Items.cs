@@ -11,7 +11,7 @@ public class Items : MonoBehaviour
 
     [Space(10)]
     [Header("物品得分")]
-    [SerializeField] int point;
+    [SerializeField]public int point;
 
     [Space(10)]
     [Header("物品弹窗")]

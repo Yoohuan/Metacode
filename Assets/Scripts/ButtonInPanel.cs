@@ -24,15 +24,18 @@ public class ButtonInPanel : MonoBehaviour
     [Header("ŒÔ∆∑")]
     [SerializeField] GameObject item;
     // Start is called before the first frame update
+    private PickUp pickup;
+    private ScoresBoard scoreboard;
+    private Items items;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OpenNextPanel()
@@ -50,8 +53,6 @@ public class ButtonInPanel : MonoBehaviour
 
         firstPanel.SetActive(true);
 
-        
-
         fatherPanel.SetActive(false);
 
 
@@ -60,6 +61,22 @@ public class ButtonInPanel : MonoBehaviour
     public void Finish()
     {
         Time.timeScale = 1.0f;
+
+        pickup = item.GetComponent<PickUp>();
+
+        items = item.GetComponent<Items>();
+
+        scoreboard = items.ScoresBoard;
+
+        int Point = items.point;
+
+        if (pickup != null)
+        {
+            pickup.PickUpItems(item);
+
+            scoreboard.AddScore(Point);
+        }
+
         Destroy(item);
         Destroy(fatherPanel);
     }

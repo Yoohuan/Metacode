@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoresBoard : MonoBehaviour
@@ -10,7 +11,7 @@ public class ScoresBoard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScoreText.text = "1";
+        ScoreText.text = "0";
     }
     public void AddScore(int Point)
     {
@@ -22,5 +23,10 @@ public class ScoresBoard : MonoBehaviour
     void Update()
     {
         ScoreText.text = Scores.ToString();
+
+        if (Scores >= 20)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
