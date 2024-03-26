@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Mathematics;
+using UnityEngine.UIElements;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -12,9 +13,15 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
 
     private Rigidbody2D myRigidbody;
+    public Sprite PlayerLeft;
+    public Sprite PlayerRight;
+    private SpriteRenderer PlayerRenderer;
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+
+        PlayerRenderer = this.GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -26,6 +33,16 @@ public class PlayerControl : MonoBehaviour
     void Move()
     {
         float xMoveDir = Input.GetAxis("Horizontal");
+
+        if (xMoveDir < 0)
+        {
+            PlayerRenderer.sprite = PlayerLeft;
+        }
+        if (xMoveDir > 0)
+        {
+            PlayerRenderer.sprite = PlayerRight;
+        }
+
         float yMoveDir = Input.GetAxis("Vertical");
         Vector2 playerVel = new Vector2(xMoveDir , yMoveDir );
         playerVel = playerVel * speed;

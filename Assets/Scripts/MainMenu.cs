@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public GameObject setMenu;
+    public GameObject CutScenes;
     //public Slider ValueOne;
     //public Slider ValueTwo;
     //public AudioClip Botton;
@@ -24,6 +25,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
 
         //GameManager.Instance.startGameCounter++;
+    }
+    public void OpenCutScenes()
+    {
+        CutScenes.SetActive(true);
     }
 
 
