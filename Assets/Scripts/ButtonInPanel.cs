@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class ButtonInPanel : MonoBehaviour
@@ -76,8 +77,70 @@ public class ButtonInPanel : MonoBehaviour
 
             scoreboard.AddScore(Point);
         }
+        else
+        {
+            scoreboard.AddScore(Point);
+        }
 
         Destroy(item);
+        Destroy(fatherPanel);
+    }
+    public void FirstCancelOption()
+    {
+        Time.timeScale = 1.0f;
+
+        int Point = 3;
+
+        items = item.GetComponent<Items>();
+
+        scoreboard = items.ScoresBoard;
+
+        scoreboard.AddScore(Point);
+
+    }
+    public void SecondCancelOption()
+    {
+        Time.timeScale = 1.0f;
+
+        int Point = 2;
+
+        items = item.GetComponent<Items>();
+
+        scoreboard = items.ScoresBoard;
+
+        scoreboard.AddScore(Point);
+    }
+    public void ContinueAndAddScore()
+    {
+        items = item.GetComponent<Items>();
+
+        scoreboard = items.ScoresBoard;
+
+        scoreboard.AddScore(5);
+
+        nextPanel.SetActive(true);
+
+        gameObject.SetActive(false);
+    }
+    public void FinishAndAddScore()
+    {
+        Time.timeScale = 1.0f;
+
+        pickup = item.GetComponent<PickUp>();
+
+        items = item.GetComponent<Items>();
+
+        scoreboard = items.ScoresBoard;
+
+        if (pickup != null)
+        {
+            pickup.PickUpItems(item);
+        }
+
+        scoreboard.AddScore(5);
+
+        Destroy(item);
+
         Destroy(fatherPanel);
     }
 

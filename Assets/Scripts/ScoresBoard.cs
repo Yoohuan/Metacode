@@ -8,6 +8,7 @@ public class ScoresBoard : MonoBehaviour
 {
     public Text ScoreText;
     public int Scores;
+    public GameObject CutScene1;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +25,17 @@ public class ScoresBoard : MonoBehaviour
     {
         ScoreText.text = Scores.ToString();
 
-        if (Scores >= 20)
+        if (Scores >= 18)
         {
-            SceneManager.LoadScene(2);
+            CutScene1.SetActive(true);
         }
+    }
+    public void NextClass()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void Cancel()
+    {
+        SceneManager.LoadScene(1);
     }
 }
