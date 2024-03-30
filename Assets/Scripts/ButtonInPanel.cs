@@ -97,6 +97,8 @@ public class ButtonInPanel : MonoBehaviour
 
         scoreboard.AddScore(Point);
 
+        fatherPanel.SetActive(false);
+
     }
     public void SecondCancelOption()
     {
@@ -109,6 +111,8 @@ public class ButtonInPanel : MonoBehaviour
         scoreboard = items.ScoresBoard;
 
         scoreboard.AddScore(Point);
+
+        fatherPanel.SetActive(false);
     }
     public void ContinueAndAddScore()
     {
