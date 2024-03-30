@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ButtonInPanel : MonoBehaviour
@@ -93,10 +94,15 @@ public class ButtonInPanel : MonoBehaviour
 
         items = item.GetComponent<Items>();
 
-        scoreboard = items.ScoresBoard;
+        if (items.isFinish == false)
+        {
+            scoreboard = items.ScoresBoard;
 
-        scoreboard.AddScore(Point);
+            scoreboard.AddScore(Point);
 
+            items.isFinish = true;
+        }
+        
         fatherPanel.SetActive(false);
 
     }
@@ -108,9 +114,34 @@ public class ButtonInPanel : MonoBehaviour
 
         items = item.GetComponent<Items>();
 
-        scoreboard = items.ScoresBoard;
+        if (items.isFinish == false)
+        {
+            scoreboard = items.ScoresBoard;
 
-        scoreboard.AddScore(Point);
+            scoreboard.AddScore(Point);
+
+            items.isFinish = true;
+        }
+
+        fatherPanel.SetActive(false);
+    }
+
+    public void ThirdCancelOption()
+    {
+        Time.timeScale = 1.0f;
+
+        int Point = 1;
+
+        items = item.GetComponent<Items>();
+
+        if (items.isFinish == false)
+        {
+            scoreboard = items.ScoresBoard;
+
+            scoreboard.AddScore(Point);
+
+            items.isFinish = true;
+        }
 
         fatherPanel.SetActive(false);
     }

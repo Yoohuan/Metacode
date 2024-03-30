@@ -19,10 +19,12 @@ public class Items : MonoBehaviour
 
     bool isTouch;
     public ScoresBoard ScoresBoard;
+    public bool isFinish;
 
     void Start()
     {
         isTouch = false;
+        isFinish = false;
     }
 
     void Update()
