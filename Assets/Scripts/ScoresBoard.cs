@@ -25,7 +25,15 @@ public class ScoresBoard : MonoBehaviour
     {
         ScoreText.text = Scores.ToString();
 
-        if (Scores >= 18)
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        int sceneIndex = currentScene.buildIndex;
+
+        if (Scores >= 18 && sceneIndex == 1)
+        {
+            CutScene1.SetActive(true);
+        }
+        if (Scores >= 22 && sceneIndex == 2)
         {
             CutScene1.SetActive(true);
         }
@@ -36,6 +44,14 @@ public class ScoresBoard : MonoBehaviour
     }
     public void Cancel()
     {
-        SceneManager.LoadScene(1);
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        int sceneIndex = currentScene.buildIndex;
+
+        SceneManager.LoadScene(sceneIndex);
+    }
+    public void BackMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
