@@ -2919,6 +2919,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinishButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6763565736590328562, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763565736590328562, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763565736590328562, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.47058824
+      objectReference: {fileID: 0}
     - target: {fileID: 8170444698285983099, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
       propertyPath: m_Text
       value: "\u300A\u6C49\u4E66\xB7\u5F8B\u5386\u5FD7\u300B\u6709\u8A00\uFF1A\u201C\u5176\u7B97\u6CD5\u7528\u7AF9\uFF0C\u5F84\u4E00\u5206\uFF0C\u957F\u516D\u5BF8\uFF0C\u4E8C\u767E\u4E03\u5341\u4E00\u679A\u800C\u6210\u516D\u89DA,\u4E3A\u4E00\u63E1\u3002\u201D\uFF1B\u300A\u68A6\u6EAA\u7B14\u8C08\u300B\u5377\u516B\u79F0\uFF1A\u201C\u7B97\u6CD5\u7528\u8D64\u7B79\u3001\u9ED1\u7B79\uFF0C\u4EE5\u522B\u6B63\u8D1F\u4E4B\u6570\u3002\u201D"
@@ -4582,7 +4594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.47058824, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7836,7 +7848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.47058824, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8336,10 +8348,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -8999,7 +9011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.47058824, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10814,10 +10826,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
