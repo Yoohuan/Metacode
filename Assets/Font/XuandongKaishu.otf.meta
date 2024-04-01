@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5a410891c2fb9a140946076e3f4497c0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - XuandongKaishu
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e3f1539b03437d741bbccba092069a0d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
