@@ -23,6 +23,10 @@ public class ButtonInPanel : MonoBehaviour
     [SerializeField] GameObject wrong;
 
     [Space(10)]
+    [Header("回答正确提示")]
+    [SerializeField] GameObject right;
+
+    [Space(10)]
     [Header("物品")]
     [SerializeField] GameObject item;
     // Start is called before the first frame update
@@ -44,7 +48,7 @@ public class ButtonInPanel : MonoBehaviour
     {
         nextPanel.SetActive(true);
         gameObject.SetActive(false);
-        
+
     }
 
     public void Cancel()
@@ -102,7 +106,7 @@ public class ButtonInPanel : MonoBehaviour
 
             items.isFinish = true;
         }
-        
+
         fatherPanel.SetActive(false);
 
     }
@@ -147,18 +151,64 @@ public class ButtonInPanel : MonoBehaviour
     }
     public void ContinueAndAddScore()
     {
+        wrong.SetActive(false);
+
+        right.SetActive(true);
+
+        StartCoroutine(ContinueDelayFunc());
+    }
+    public void FinishAndAddScore()
+    {
+
+        wrong.SetActive(false);
+
+        right.SetActive(true);
+
+        StartCoroutine(FinishDelayFunc());
+
+        
+    }
+
+    public void WrongButton()
+    {
+        wrong.SetActive(true);
+    }
+
+    public void FinishAnswer()
+    {
+        right.SetActive(true);
+
+        StartCoroutine("DelayFunc");
+
+        Time.timeScale = 1.0f;
+
+        pickup = item.GetComponent<PickUp>();
+
         items = item.GetComponent<Items>();
 
         scoreboard = items.ScoresBoard;
 
-        scoreboard.AddScore(5);
+        int Point = items.point;
 
-        nextPanel.SetActive(true);
+        if (pickup != null)
+        {
+            pickup.PickUpItems(item);
 
-        gameObject.SetActive(false);
+            scoreboard.AddScore(Point);
+        }
+        else
+        {
+            scoreboard.AddScore(Point);
+        }
+
+        Destroy(item);
+        Destroy(fatherPanel);
     }
-    public void FinishAndAddScore()
+
+    IEnumerator FinishDelayFunc()
     {
+        yield return new WaitForSeconds(2);
+
         Time.timeScale = 1.0f;
 
         pickup = item.GetComponent<PickUp>();
@@ -179,8 +229,19 @@ public class ButtonInPanel : MonoBehaviour
         Destroy(fatherPanel);
     }
 
-    public void WrongButton()
+    IEnumerator ContinueDelayFunc()
     {
-        wrong.SetActive(true);
+        yield return new WaitForSeconds(2);
+
+        items = item.GetComponent<Items>();
+
+        scoreboard = items.ScoresBoard;
+
+        scoreboard.AddScore(5);
+
+        nextPanel.SetActive(true);
+
+        gameObject.SetActive(false);
+
     }
 }
