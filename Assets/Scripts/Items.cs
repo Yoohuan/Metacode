@@ -19,6 +19,7 @@ public class Items : MonoBehaviour
 
     bool isTouch;
     public ScoresBoard ScoresBoard;
+    public PlayerControl PlayerControl;
     public bool isFinish;
 
     void Start()
@@ -63,8 +64,9 @@ public class Items : MonoBehaviour
         if (isTouch && Input.GetKeyDown(KeyCode.F))
         {
             //ScoresBoard.AddScore(point);
-            Time.timeScale = 0.0f;
+            //Time.timeScale = 0.0f;
             panel.SetActive(true);
+            PlayerControl.inPanel = true;
         }
     }
 }

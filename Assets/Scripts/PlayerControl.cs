@@ -16,18 +16,30 @@ public class PlayerControl : MonoBehaviour
     public Sprite PlayerLeft;
     public Sprite PlayerRight;
     private SpriteRenderer PlayerRenderer;
+    public bool inPanel;
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
 
         PlayerRenderer = this.GetComponent<SpriteRenderer>();
 
+        inPanel = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (!inPanel)
+        {
+            Move();
+        }
+        else
+        {
+            Vector2 playerStop = new Vector2 (0, 0);
+            myRigidbody.velocity = playerStop;
+        }
+        
     }
 
     void Move()

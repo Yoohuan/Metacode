@@ -33,6 +33,7 @@ public class ButtonInPanel : MonoBehaviour
     private PickUp pickup;
     private ScoresBoard scoreboard;
     private Items items;
+    public PlayerControl PlayerControl;
     void Start()
     {
 
@@ -53,7 +54,9 @@ public class ButtonInPanel : MonoBehaviour
 
     public void Cancel()
     {
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
+
+        PlayerControl.inPanel = false;
 
         gameObject.SetActive(false);
 
@@ -66,7 +69,9 @@ public class ButtonInPanel : MonoBehaviour
 
     public void Finish()
     {
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
+
+        PlayerControl.inPanel = false;
 
         pickup = item.GetComponent<PickUp>();
 
@@ -92,7 +97,9 @@ public class ButtonInPanel : MonoBehaviour
     }
     public void FirstCancelOption()
     {
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
+
+        PlayerControl.inPanel = false;
 
         int Point = 3;
 
@@ -112,7 +119,9 @@ public class ButtonInPanel : MonoBehaviour
     }
     public void SecondCancelOption()
     {
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
+
+        PlayerControl.inPanel = false;
 
         int Point = 2;
 
@@ -132,7 +141,9 @@ public class ButtonInPanel : MonoBehaviour
 
     public void ThirdCancelOption()
     {
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
+
+        PlayerControl.inPanel = false;
 
         int Point = 1;
 
@@ -164,6 +175,10 @@ public class ButtonInPanel : MonoBehaviour
 
         right.SetActive(true);
 
+        //Time.timeScale = 1.0f;
+
+        
+
         StartCoroutine(FinishDelayFunc());
 
         
@@ -174,42 +189,12 @@ public class ButtonInPanel : MonoBehaviour
         wrong.SetActive(true);
     }
 
-    public void FinishAnswer()
-    {
-        right.SetActive(true);
-
-        StartCoroutine("DelayFunc");
-
-        Time.timeScale = 1.0f;
-
-        pickup = item.GetComponent<PickUp>();
-
-        items = item.GetComponent<Items>();
-
-        scoreboard = items.ScoresBoard;
-
-        int Point = items.point;
-
-        if (pickup != null)
-        {
-            pickup.PickUpItems(item);
-
-            scoreboard.AddScore(Point);
-        }
-        else
-        {
-            scoreboard.AddScore(Point);
-        }
-
-        Destroy(item);
-        Destroy(fatherPanel);
-    }
 
     IEnumerator FinishDelayFunc()
     {
         yield return new WaitForSeconds(2);
 
-        Time.timeScale = 1.0f;
+        PlayerControl.inPanel = false;
 
         pickup = item.GetComponent<PickUp>();
 
@@ -242,6 +227,7 @@ public class ButtonInPanel : MonoBehaviour
         nextPanel.SetActive(true);
 
         gameObject.SetActive(false);
+
 
     }
 }

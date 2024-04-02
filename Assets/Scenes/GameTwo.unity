@@ -410,6 +410,7 @@ MonoBehaviour:
   wrong: {fileID: 0}
   right: {fileID: 0}
   item: {fileID: 941777547}
+  PlayerControl: {fileID: 839295391}
 --- !u!114 &59700440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,6 +874,10 @@ PrefabInstance:
       propertyPath: firstPanel
       value: 
       objectReference: {fileID: 508366699}
+    - target: {fileID: 930855480205472407, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 973508878609902650, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1065,6 +1070,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 955515417}
+    - target: {fileID: 4643167899633152141, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 5171394794307084705, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 255.0939
@@ -1775,6 +1784,10 @@ PrefabInstance:
       propertyPath: firstPanel
       value: 
       objectReference: {fileID: 1883223219}
+    - target: {fileID: 930855480205472407, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 973508878609902650, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1971,6 +1984,10 @@ PrefabInstance:
       propertyPath: wrong
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4643167899633152141, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 5171394794307084705, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 281.1145
@@ -3161,6 +3178,10 @@ PrefabInstance:
       propertyPath: ScoresBoard
       value: 
       objectReference: {fileID: 1230573068}
+    - target: {fileID: 6854544476207282639, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 8066457959977994674, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2487
@@ -3696,6 +3717,10 @@ PrefabInstance:
       propertyPath: ScoresBoard
       value: 
       objectReference: {fileID: 1230573068}
+    - target: {fileID: 6854544476207282639, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 8066457959977994674, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.27749923
@@ -4184,6 +4209,10 @@ PrefabInstance:
       propertyPath: ScoresBoard
       value: 
       objectReference: {fileID: 1230573068}
+    - target: {fileID: 6854544476207282639, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 8066457959977994674, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18683
@@ -7107,6 +7136,17 @@ CircleCollider2D:
   m_Offset: {x: -0.1600951, y: -3.6151624}
   serializedVersion: 2
   m_Radius: 0.4460156
+--- !u!114 &839295391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9127392901693920310, guid: 506b8690dc86e144c8f54bfd7f86e7c8, type: 3}
+  m_PrefabInstance: {fileID: 839295385}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839295386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c2648187d6ab44fb8b694fa39b81ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &855381518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7829,6 +7869,10 @@ PrefabInstance:
       propertyPath: nextPanel
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4643167899633152141, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 5334048780341703058, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10021,6 +10065,10 @@ PrefabInstance:
       propertyPath: ScoresBoard
       value: 
       objectReference: {fileID: 1230573068}
+    - target: {fileID: 6854544476207282639, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 8066457959977994674, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09050063
@@ -12073,6 +12121,10 @@ PrefabInstance:
       propertyPath: nextPanel
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4643167899633152141, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 5910933205968010900, guid: 371d9156015a7e6428d2b53b762e4cd0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 200
@@ -12314,6 +12366,7 @@ MonoBehaviour:
   wrong: {fileID: 0}
   right: {fileID: 0}
   item: {fileID: 408101576}
+  PlayerControl: {fileID: 839295391}
 --- !u!1001 &1516086229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12362,6 +12415,10 @@ PrefabInstance:
       propertyPath: ScoresBoard
       value: 
       objectReference: {fileID: 1230573068}
+    - target: {fileID: 6854544476207282639, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
+      propertyPath: PlayerControl
+      value: 
+      objectReference: {fileID: 839295391}
     - target: {fileID: 8066457959977994674, guid: 3361aad3010c5054eafaf98e469215ec, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17371804
@@ -14624,6 +14681,7 @@ MonoBehaviour:
   wrong: {fileID: 0}
   right: {fileID: 0}
   item: {fileID: 913567594}
+  PlayerControl: {fileID: 839295391}
 --- !u!1 &1902876513
 GameObject:
   m_ObjectHideFlags: 0
